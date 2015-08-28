@@ -1,0 +1,28 @@
+{
+  "name": "angular-delimited-file-export",
+  "version": "1.0.0",
+  "authors": [
+    "Robson Florentino <robson.florentino.silva@gmail.com>"
+  ],
+  "description": "Biblioteca angular para criar um arquivo de download com os dados baseados em um delimitador de campos",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "CSV, delimited, file, export, download"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "jquery": "~2.1.4"
+  }
+}
