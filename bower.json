@@ -1,11 +1,11 @@
 {
-  "name": "angular-delimited-file-export",
+  "name": "csv-export",
   "version": "1.0.0",
   "authors": [
     "Robson Florentino <robson.florentino.silva@gmail.com>"
   ],
   "description": "Biblioteca angular para criar um arquivo de download com os dados baseados em um delimitador de campos",
-  "main": "index.html",
+  "main": "src/csv-export-module.js",
   "moduleType": [
     "amd"
   ],
@@ -16,13 +16,11 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "vendor/",
-    "test",
-    "tests"
+    "vendor",
+    "test"
   ],
   "dependencies": {
-    "angular": "~1.4.4",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "angular": "~1.4.4"
   }
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diretiva para exportação de arquivos CSV.</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+<!--
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+-->
+                </ul>
+            </div><!--.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container" ng-controller="sampleController" >
+        
+        <div class="starter-template">
+            <h1>Diretiva para exportação de arquivos CSV.</h1>
+            <p class="lead">Clique para executar uma exportação dos dados em memória.</p>
+            <div>
+                <csv-export-directive source="products"></csv-export-directive>
+            </div>
+        </div>
+        
+    </div>    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js"></script>
+    <script src="../dist/csv-export.min.js"></script>
+    
+    <script>
+        var app = angular.module('myApp', ['CsvExportModule']);
+        
+        app.controller('sampleController', ['$scope', function ($scope) {
+            $scope.nome = 'Teste';
+            
+            $scope.products = [
+                {id: 1, nome: 'produto 1', preco: '1,95'},
+                {id: 2, nome: 'produto 2', preco: '2,84'},
+                {id: 3, nome: 'produto 3', preco: '3,73'},
+                {id: 4, nome: 'produto 4', preco: '4,62'},
+                {id: 5, nome: 'produto 5', preco: '5,51'},
+                {id: 6, nome: 'produto 6', preco: '6,40'},
+                {id: 7, nome: 'produto 7', preco: '7,39'},
+                {id: 8, nome: 'produto 8', preco: '8,28'},
+                {id: 9, nome: 'produto 9', preco: '9,17'},
+                {id: 10, nome: 'produto 10', preco: '10,97'},
+                {id: 11, nome: 'produto 11', preco: '11,86'},
+                {id: 12, nome: 'produto 12', preco: '12,85'},
+                {id: 13, nome: 'produto 13', preco: '13,74'},
+                {id: 14, nome: 'produto 14', preco: '13,63'},
+                {id: 15, nome: 'produto 15', preco: '15,52'}
+            ];            
+        }]);
+    </script>
+</body>
+</html>
