@@ -16,7 +16,7 @@ var csvExportController = function ($scope, $csvExportService) {
     
     $scope.actions.showDialog = function () {
         $scope.form.isVisible = true;
-    }
+    };
 
     // Criando um dialogo para download do arquivo csv.
     $scope.actions.doDownload = function () {

@@ -1,4 +1,4 @@
-/*global growl: false*/
+/*global console: false*/
 /*global escape: false*/
 /*jslint continue:true*/
 /*jslint regexp: true*/

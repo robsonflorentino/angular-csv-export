@@ -31,7 +31,7 @@ var csvExportDirective = function () {
             });
 
             // Criando um método de exibição do dialogo de download.
-            $scope.showModal = function (isVisible) {    
+            $scope.showModal = function (isVisible) {
                 if (isVisible) {
                     $element.find('#mdl-export').modal("show");
                 } else {

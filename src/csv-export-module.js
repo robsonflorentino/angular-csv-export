@@ -1,3 +1,4 @@
+/*global console: false*/
 /*global angular: false*/
 /*global csvExportService: false*/
 /*global csvExportController: false*/
@@ -8,22 +9,22 @@ if (angular) {
     var csvExportModule = angular.module('CsvExportModule', ['ngCookies', 'pascalprecht.translate', 'tmh.dynamicLocale']);
     
     // Configurando o módulo
-    csvExportModule.config(['$translateProvider', 'tmhDynamicLocaleProvider', function($translateProvider, tmhDynamicLocaleProvider){
-        
+    csvExportModule.config(['$translateProvider', 'tmhDynamicLocaleProvider', function ($translateProvider, tmhDynamicLocaleProvider) {
+        'use strict';
         console.debug('[CONFIG: CSV-EXPORT]', 'Configurando a aplicação.');
         
-        console.debug('[CONFIG: CSV-EXPORT]','Configurando tradutores');
+        console.debug('[CONFIG: CSV-EXPORT]', 'Configurando tradutores');
         $translateProvider.useStaticFilesLoader({
             prefix: '/src/lang/',
             suffix: '.json'
         });
 
-        console.debug('[CONFIG: CSV-EXPORT]','Configurando l10n.');
+        console.debug('[CONFIG: CSV-EXPORT]', 'Configurando l10n.');
         $translateProvider.preferredLanguage('pt-br');
         $translateProvider.fallbackLanguage(['en-us']);
         $translateProvider.useCookieStorage();
 
-        console.debug('[CONFIG: CSV-EXPORT]','Configurando i18n.');
+        console.debug('[CONFIG: CSV-EXPORT]', 'Configurando i18n.');
         tmhDynamicLocaleProvider.defaultLocale("pt-br");
         tmhDynamicLocaleProvider.localeLocationPattern('/vendor/angular-i18n/angular-locale_{{locale}}.js');
         tmhDynamicLocaleProvider.useStorage('$cookieStore');
